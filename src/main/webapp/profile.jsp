@@ -1,3 +1,4 @@
+<%@page import="com.tech.blog.helper.Message"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="com.tech.blog.entities.User" %> 
@@ -68,6 +69,20 @@
 	</nav>
 	<!-- navbar end -->
 	
+						<%
+						    Message msg = (Message)session.getAttribute("msg");
+						    if(msg != null){
+						 %>
+						  		<div class="alert <%= msg.getCssClass() %>" role="alert">
+								  <%= msg.getContent() %>
+								</div>
+						 <%
+						    }
+						    
+						    session.removeAttribute("msg");
+						
+						%>
+	
 	<!-- start of the modal  -->
 	
 <!-- Button trigger modal -->
@@ -112,7 +127,7 @@
 			<!-- profile edit -->
 			<div id="profile-edit" style="display : none ">
 				 <h6 mt-2> please edit carefully </h6>
-				 <form  action="EditServlet" method="">
+				 <form  action="EditServlet" method="post">
 				 	<table class="table">
 				 		<tr>
 				 			<td> ID : </td>
