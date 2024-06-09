@@ -52,6 +52,9 @@
 	         <li class="nav-item">
 	          <a class="nav-link" href="#">contact us</a>
 	        </li>
+	         <li class="nav-item">
+	           <a class="nav-link" href="#">do post</a>
+	        </li>
 	        </li>
 	      </ul>
 	      
@@ -165,7 +168,10 @@
   </div>
 </div>
 	 
-	<!--  end of the model  -->
+	<!--  end edit model of the model  -->
+	
+	
+	
 	
 	
 	
